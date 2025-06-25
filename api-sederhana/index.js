@@ -10,11 +10,18 @@ app.get('/hello', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-    res.status(200).json({
+    res.status(201).json({
         data: 100,
         status: "berhasil"
     })
 });
+
+app.post('/hapus', (req, res) => {
+    res.status(200).json({
+        data: 0,
+        status: "berhasil dihapus"
+    })
+})
 
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
